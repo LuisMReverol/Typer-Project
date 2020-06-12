@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eeeeef;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: #232323; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30rem; }
+  .container__input {
+    background-color: #111111;
+    color: #ffffff;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 2rem; }
+  .container__timer {
+    margin-top: 1rem;
+    align-self: flex-start; }
+  .container__game {
+    display: flex;
+    flex-direction: column; }
+  .container__word {
+    margin-bottom: 1rem;
+    font-size: 2rem; }

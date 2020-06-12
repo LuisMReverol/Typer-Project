@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //10px = 1rem 
+}
+
+body {
+    font-family: $default-font;
+    color:$color-primary;
+    font-weight: 400;
+    font-size: 1.6rem;
+    background-color: $color-background;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30rem;
+
+    &__input{
+        background-color: $color-binput;
+        color: $color-input;
+        font-family: $default-font;
+        font-size: 2rem;
+    }
+
+    &__timer {
+        margin-top: 1rem;
+        align-self: flex-start;
+    }
+
+    &__game {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__word {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+}
