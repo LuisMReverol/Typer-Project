@@ -1,49 +1,77 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
+$bp-larger: 103.125em;
+$bp-largest: 90.62em;
+$bp-large: 81.25em;
+$bp-largemid: 75em;
+$bp-medium: 59.4em;
+$bp-smallmid: 46.9em;
+$bp-small: 37.5em;
+
 html {
-    font-size: 62.5%; //10px = 1rem 
+  font-size: 62.5%; //10px = 1rem
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 55%;
+  }
 }
 
 body {
-    font-family: $default-font;
-    color:$color-primary;
-    font-weight: 400;
-    font-size: 1.6rem;
-    background-color: $color-background;
+  font-family: $default-font;
+  color: $color-primary;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: $color-background;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 3rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-style: italic;
+  color: $color-secondary;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__input {
+    background-color: $color-binput;
+    color: $color-input;
+    font-family: $default-font;
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  &__timer {
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+
+  &__content {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    margin: 30rem;
+  }
 
-    &__input{
-        background-color: $color-binput;
-        color: $color-input;
-        font-family: $default-font;
-        font-size: 2rem;
-    }
-
-    &__timer {
-        margin-top: 1rem;
-        align-self: flex-start;
-    }
-
-    &__game {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__word {
-        margin-bottom: 1rem;
-        font-size: 2rem;
-    }
+  &__word {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
 }

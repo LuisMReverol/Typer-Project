@@ -7,6 +7,9 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 55%; } }
 
 body {
   font-family: "Press Start 2P", sans-serif;
@@ -17,21 +20,35 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 3rem; }
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-style: italic;
+  color: #14be39; }
+
+.game {
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 30rem; }
-  .container__input {
+  flex-direction: column; }
+  .game__input {
     background-color: #111111;
     color: #ffffff;
     font-family: "Press Start 2P", sans-serif;
-    font-size: 2rem; }
-  .container__timer {
+    font-size: 2rem;
+    width: 100%; }
+  .game__timer {
     margin-top: 1rem;
     align-self: flex-start; }
-  .container__game {
+  .game__content {
     display: flex;
     flex-direction: column; }
-  .container__word {
+  .game__word {
     margin-bottom: 1rem;
     font-size: 2rem; }
